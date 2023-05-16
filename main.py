@@ -12,17 +12,23 @@ print("I'm thinking of a number between 1 and 100.")
 answer = randint(1, 100)
 print(f"Pssst, the correct answer is {answer}")
 
-
 easy = 10
 hard = 5
+attempts = 0
 
-difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
-attempts = None
+def difficulty():
+    if input("Choose a difficulty. Type 'easy' or 'hard': ").lower() == 'easy':
+        attempts = easy
+    else:
+        attempts = hard
+    return attempts
 
-print(f"You have {difficulty} attempts remaining to guess the number")
+attempts = difficulty()
+
+print(f"You have {attempts} attempts remaining to guess the number.")
 
 
-guess = int(input("Make a guess: "))
+# guess = int(input("Make a guess: "))
 
 
 def check_guess():
@@ -30,7 +36,6 @@ def check_guess():
         print("Too low.")
     elif guess > answer:
         print("Too high.")
-
-
-# print(f"You got it! The answer was {answer}")
+    # else:
+        # print(f"You got it! The answer was {answer}")
 

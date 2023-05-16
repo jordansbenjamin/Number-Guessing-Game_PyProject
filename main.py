@@ -13,6 +13,7 @@ answer = randint(1, 100)
 print(f"Pssst, the correct answer is {answer}")
 
 # TODO: Allow the player to submit a guess for a number between 1 and 100.
+guess = int(input("Make a guess: "))
 
 # TODO: Check user's guess against actual answer. Print "Too high." or "Too low." depending on the user's answer. 
 

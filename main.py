@@ -1,10 +1,15 @@
-
+from random import randint
 # TODO: Include an ASCII art logo.
 
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 
+# TODO: Create a function that chooses random number 1-100
+def random_choice():
+    '''A function that chooses random number 1-100'''
+    return randint(1, 100)
 
+answer = random_choice()
 
 # TODO: Allow the player to submit a guess for a number between 1 and 100.
 

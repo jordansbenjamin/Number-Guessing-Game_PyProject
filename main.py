@@ -36,6 +36,9 @@ while True:
     if guess != answer:
         print("Guess again.")
         attempts -= 1
+        if attempts == 0:
+            print("You've run out of guesses, you lose.")
+            break
         continue
     else:
         break

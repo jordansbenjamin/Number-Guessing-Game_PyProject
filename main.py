@@ -6,12 +6,10 @@ print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 
 def difficulty():
-    attempts = 0
     if input("Choose a difficulty. Type 'easy' or 'hard': ").lower() == 'easy':
-        attempts = easy
+        return easy
     else:
-        attempts = hard
-    return attempts
+        return hard
 
 def check_guess():
     if guess < answer:
@@ -22,11 +20,10 @@ def check_guess():
         print(f"You got it! The answer was {answer}")
 
 answer = randint(1, 100)
-print(f"Pssst, the correct answer is {answer}")
-
 easy = 10
 hard = 5
 attempts = difficulty()
+print(f"Pssst, the correct answer is {answer}")
 
 while True:
     print(f"You have {attempts} attempts remaining to guess the number.")
